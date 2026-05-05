@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tony O’Shea (Tosh)">
+<meta name="dcterms.date" content="2026-04-26">
+
+<title>ICT105 - Lab Exercises</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="ICT105_Worksheet4_Session7and8_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/popper.min.js"></script>
+<script src="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ICT105_Worksheet4_Session7and8_files/libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ICT105_Worksheet4_Session7and8_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ICT105_Worksheet4_Session7and8_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ICT105_Worksheet4_Session7and8_files/libs/bootstrap/bootstrap-04500e88f37a4a8b4dfcb0b001bb3278.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#session-7" id="toc-session-7" class="nav-link active" data-scroll-target="#session-7"><span class="header-section-number">1</span> Session 7</a>
+  <ul class="collapse">
+  <li><a href="#working-with-functions" id="toc-working-with-functions" class="nav-link" data-scroll-target="#working-with-functions"><span class="header-section-number">1.1</span> Working with Functions</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1.1.1</span> Introduction</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1"><span class="header-section-number">1.1.2</span> Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2"><span class="header-section-number">1.1.3</span> Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3"><span class="header-section-number">1.1.4</span> Exercise 3</a></li>
+  <li><a href="#best-practice-for-clarity-of-documentation" id="toc-best-practice-for-clarity-of-documentation" class="nav-link" data-scroll-target="#best-practice-for-clarity-of-documentation"><span class="header-section-number">1.1.5</span> Best practice for clarity of documentation</a></li>
+  </ul></li>
+  <li><a href="#example-to-demonstrate-the-code-and-output" id="toc-example-to-demonstrate-the-code-and-output" class="nav-link" data-scroll-target="#example-to-demonstrate-the-code-and-output"><span class="header-section-number">1.2</span> Example to demonstrate the code and output</a>
+  <ul class="collapse">
+  <li><a href="#two-variable-summarisation" id="toc-two-variable-summarisation" class="nav-link" data-scroll-target="#two-variable-summarisation"><span class="header-section-number">1.2.1</span> (1) Two variable Summarisation</a></li>
+  <li><a href="#read-a-csv-file-into-a-dictionary." id="toc-read-a-csv-file-into-a-dictionary." class="nav-link" data-scroll-target="#read-a-csv-file-into-a-dictionary."><span class="header-section-number">1.2.2</span> (2) Read a CSV file into a dictionary.</a></li>
+  <li><a href="#gui-user-input-example-with-alternative-output-methods." id="toc-gui-user-input-example-with-alternative-output-methods." class="nav-link" data-scroll-target="#gui-user-input-example-with-alternative-output-methods."><span class="header-section-number">1.2.3</span> (3) GUI user input example with alternative output methods.</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#session-8" id="toc-session-8" class="nav-link" data-scroll-target="#session-8"><span class="header-section-number">2</span> Session 8</a>
+  <ul class="collapse">
+  <li><a href="#object-orientated-programming-oop-working-with-classes-methods" id="toc-object-orientated-programming-oop-working-with-classes-methods" class="nav-link" data-scroll-target="#object-orientated-programming-oop-working-with-classes-methods"><span class="header-section-number">2.1</span> Object-Orientated Programming (OOP) Working with Classes &amp; Methods</a>
+  <ul class="collapse">
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">2.1.1</span> Introduction</a></li>
+  <li><a href="#exercise-1-1" id="toc-exercise-1-1" class="nav-link" data-scroll-target="#exercise-1-1"><span class="header-section-number">2.1.2</span> Exercise 1</a></li>
+  <li><a href="#exercise-2-1" id="toc-exercise-2-1" class="nav-link" data-scroll-target="#exercise-2-1"><span class="header-section-number">2.1.3</span> Exercise 2</a></li>
+  <li><a href="#exercise-3-1" id="toc-exercise-3-1" class="nav-link" data-scroll-target="#exercise-3-1"><span class="header-section-number">2.1.4</span> Exercise 3</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4"><span class="header-section-number">2.1.5</span> Exercise 4</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5"><span class="header-section-number">2.1.6</span> Exercise 5</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">3</span> Appendices</a>
+  <ul class="collapse">
+  <li><a href="#useful-reference-sites" id="toc-useful-reference-sites" class="nav-link" data-scroll-target="#useful-reference-sites"><span class="header-section-number">3.1</span> Useful reference sites</a></li>
+  </ul></li>
+  <li><a href="#sample-data" id="toc-sample-data" class="nav-link" data-scroll-target="#sample-data"><span class="header-section-number">4</span> Sample Data</a>
+  <ul class="collapse">
+  <li><a href="#table-1-name-enrollments" id="toc-table-1-name-enrollments" class="nav-link" data-scroll-target="#table-1-name-enrollments"><span class="header-section-number">4.0.1</span> Table (1) Name: Enrollments</a></li>
+  <li><a href="#table-2-name-courses" id="toc-table-2-name-courses" class="nav-link" data-scroll-target="#table-2-name-courses"><span class="header-section-number">4.0.2</span> Table (2) Name: Courses</a></li>
+  <li><a href="#table-3-name-students" id="toc-table-3-name-students" class="nav-link" data-scroll-target="#table-3-name-students"><span class="header-section-number">4.0.3</span> Table (3) Name: Students</a></li>
+  <li><a href="#table-4-name-lecturers" id="toc-table-4-name-lecturers" class="nav-link" data-scroll-target="#table-4-name-lecturers"><span class="header-section-number">4.0.4</span> Table (4) Name: Lecturers</a></li>
+  <li><a href="#table-5-name-lecturerassignment" id="toc-table-5-name-lecturerassignment" class="nav-link" data-scroll-target="#table-5-name-lecturerassignment"><span class="header-section-number">4.0.5</span> Table (5) Name: LecturerAssignment</a></li>
+  <li><a href="#table-6-name-locations" id="toc-table-6-name-locations" class="nav-link" data-scroll-target="#table-6-name-locations"><span class="header-section-number">4.0.6</span> Table (6) Name: Locations</a></li>
+  <li><a href="#table-7-name-timeslots" id="toc-table-7-name-timeslots" class="nav-link" data-scroll-target="#table-7-name-timeslots"><span class="header-section-number">4.0.7</span> Table (7) Name: TimeSlots</a></li>
+  <li><a href="#table-8-name-equipment" id="toc-table-8-name-equipment" class="nav-link" data-scroll-target="#table-8-name-equipment"><span class="header-section-number">4.0.8</span> Table (8) Name: Equipment</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ICT105_Worksheet4_Session7and8.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="ICT105_Worksheet4_Session7and8.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ICT105 - Lab Exercises</h1>
+<p class="subtitle lead">Worksheet 4 (Sessions 7 &amp; 8)</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tony O’Shea (Tosh) </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 26, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="page-break-after: always;"></div>
+<section id="session-7" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Session 7</h1>
+<section id="working-with-functions" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="working-with-functions"><span class="header-section-number">1.1</span> Working with Functions</h2>
+<section id="introduction" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1.1</span> Introduction</h3>
+<p>Functions are components in Python programming, defined for reusable code blocks that perform specific tasks. They allow you to break down complex problems into smaller, manageable units, making your code more organised, efficient, and easier to maintain. &nbsp;</p>
+</section>
+<section id="exercise-1" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="exercise-1"><span class="header-section-number">1.1.2</span> Exercise 1</h3>
+<section id="student-registration" class="level4">
+<h4 class="anchored" data-anchor-id="student-registration">Student Registration</h4>
+<ol type="1">
+<li><p>Define a Python function called <strong>course_enrollment()</strong> that registers a student for a new unit and prints a confirmation message for standard out <strong>(stdout)</strong>. &nbsp;The message should include the student’s ID, first name, and last name, along with the course’s ID and course name.&nbsp;</p></li>
+<li><p>Call the function using positional arguments to print the student and course information.</p></li>
+<li><p>Call the function a second time using a keyword argument of <strong>Add</strong>, and if <strong>Add</strong> is not an argument that has been passed, then change the message to include the text <strong>Echo</strong>.</p></li>
+</ol>
+</section>
+<section id="student-action" class="level4">
+<h4 class="anchored" data-anchor-id="student-action">Student Action</h4>
+<ol type="1">
+<li><p>This exercise modifies the <strong>course_enrollment()</strong> function from the previous exercise. In this version, the function should use the default <strong>Echo</strong> to print a message similar to <strong>exercise 1</strong>. The actions required:</p></li>
+<li><p><strong>Default</strong> - The message should include the student and course information and include the word <strong>Echo</strong> as part of the text in the message.</p></li>
+<li><p><strong>Amend</strong> - The message should include the student and course information and include the word <strong>Amend</strong> as part of the text in the message.</p></li>
+<li><p><strong>Delete</strong> - The message should include the student and course information and include the word <strong>Delete</strong> as part of the text in the message.</p></li>
+</ol>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="exercise-2" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="exercise-2"><span class="header-section-number">1.1.3</span> Exercise 2</h3>
+<section id="student-course-list" class="level4">
+<h4 class="anchored" data-anchor-id="student-course-list">Student Course List</h4>
+<ol type="1">
+<li><p>Define a Python function that allows input from standard in <strong>(stdin)</strong> to build a list of courses the student has enrolled in. The function should accept the student ID and name and then use a function that collects the course IDs. The function call will use the arguments <strong>student ID and name</strong> to summarise the courses enrolled. The function should collect four courses and the final action would be to confirm which semester and year.</p></li>
+<li><p>Using the code from <strong>exercise 2.1</strong> (above), write a function that stores information for each course <strong>(course ID and course name)</strong> in a dictionary. It should accept an arbitrary number of courses to populate the keyword arguments.</p></li>
+</ol>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="exercise-3" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="exercise-3"><span class="header-section-number">1.1.4</span> Exercise 3</h3>
+<section id="tkinter-calculator" class="level4">
+<h4 class="anchored" data-anchor-id="tkinter-calculator">Tkinter calculator</h4>
+<p>Create a basic calculator using Python Tkinter to perform <strong>addition, subtraction, multiplication, and division</strong>. The calculator should have two input fields for numbers and a button to trigger the calculation. The result should be displayed in a separate label.</p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="best-practice-for-clarity-of-documentation" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="best-practice-for-clarity-of-documentation"><span class="header-section-number">1.1.5</span> Best practice for clarity of documentation</h3>
+<p>To enhance clarity, present the code and its resulting output together. Each code interaction should be accompanied by documentation of actions, please review the example below.</p>
+</section>
+</section>
+<section id="example-to-demonstrate-the-code-and-output" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="example-to-demonstrate-the-code-and-output"><span class="header-section-number">1.2</span> Example to demonstrate the code and output</h2>
+<section id="two-variable-summarisation" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="two-variable-summarisation"><span class="header-section-number">1.2.1</span> (1) Two variable Summarisation</h3>
+<p>This code adds two numbers and prints the result to the screen <strong>(stdout)</strong>.</p>
+<section id="python-code-1" class="level4">
+<h4 class="anchored" data-anchor-id="python-code-1">Python code (1):</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a and b.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>myout <span class="op">=</span> (a<span class="op">+</span>b) <span class="co"># Add a + b and store to myout.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of a + b equals to"</span>, myout) <span class="co"># Send to standard out.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="output" class="level4">
+<h4 class="anchored" data-anchor-id="output">Output:</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>The <span class="bu">sum</span> of a <span class="op">+</span> b equals <span class="dv">8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="read-a-csv-file-into-a-dictionary." class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="read-a-csv-file-into-a-dictionary."><span class="header-section-number">1.2.2</span> (2) Read a CSV file into a dictionary.</h3>
+<p>A basic example of a Comma-Separated Values (CSV) <strong>student.csv</strong> file being loaded using pandas.</p>
+<section id="python-code-2" class="level4">
+<h4 class="anchored" data-anchor-id="python-code-2">Python code (2):</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">Read the CSV file into a DataFrame.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">The pandas library is used to read the CSV file and store it in a DataFrame for easier manipulation.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">Assuming the CSV file is located in the "WIP" directory and has no header row.</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">The columns are expected to be in the order: StudentID, StudentFirstname, StudentLastname, Email.</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">If the CSV file has a header row, remove the "header=None" argument.</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># df = pd.read_csv("WIP/students.csv", header = None)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"students.csv"</span>, header <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary to store the data</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># The dictionary will use student IDs as keys and a list of [first name, last name, email] as values.</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>student_details <span class="op">=</span> {}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterate over the DataFrame rows</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># The iterrows() function allows us to loop through each row of the DataFrame as (index, row) pairs.</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> df.iterrows():</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    student_id <span class="op">=</span> row[<span class="dv">0</span>] <span class="co"># Assuming student ID is in the first column.</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    student_firstname <span class="op">=</span> row[<span class="dv">1</span>] <span class="co"># Assuming first name second column.</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    student_surname <span class="op">=</span> row[<span class="dv">2</span>] <span class="co"># Assuming surname in the third column.</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    student_email <span class="op">=</span> row[<span class="dv">3</span>] <span class="co"># Assuming email in the fourth column.</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">Add the student data to the dictionary</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co">The student ID is used as the key, and the value is a list containing the first name, surname, and email.</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co">The if statement checks if the student ID is not already in the dictionary to avoid overwriting existing entries.</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span> </span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> student_id <span class="kw">not</span> <span class="kw">in</span> student_details:</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    student_details[student_id] <span class="op">=</span> [student_firstname, student_surname, student_email]</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the resulting dictionary entries</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> student_id, details <span class="kw">in</span> student_details.items():</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Student Details: </span><span class="sc">{</span>student_id<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>details[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>details[<span class="dv">1</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>details[<span class="dv">2</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="gui-user-input-example-with-alternative-output-methods." class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="gui-user-input-example-with-alternative-output-methods."><span class="header-section-number">1.2.3</span> (3) GUI user input example with alternative output methods.</h3>
+<p>This code implements a simple Student Information application using Tkinter.</p>
+<section id="python-code-3" class="level4">
+<h4 class="anchored" data-anchor-id="python-code-3">Python code (3):</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the Tkinter library for creating the GUI application.    </span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tkinter <span class="im">as</span> tk</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tkinter <span class="im">import</span> messagebox, filedialog</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  Define the StudentApp class to encapsulate the functionality of the application.</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> StudentApp:</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">#   The __init__ method initialises the application, setting up the main window and input fields.</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, root):</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.root <span class="op">=</span> root</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.root.title(<span class="st">"Student Information Input"</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.students <span class="op">=</span> []</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Input form labels and entry fields</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        tk.Label(root, text<span class="op">=</span><span class="st">"Student Number:"</span>).grid(row<span class="op">=</span><span class="dv">0</span>, column<span class="op">=</span><span class="dv">0</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        tk.Label(root, text<span class="op">=</span><span class="st">"First Name:"</span>).grid(row<span class="op">=</span><span class="dv">1</span>, column<span class="op">=</span><span class="dv">0</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        tk.Label(root, text<span class="op">=</span><span class="st">"Last Name:"</span>).grid(row<span class="op">=</span><span class="dv">2</span>, column<span class="op">=</span><span class="dv">0</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Entry fields for student number, first name, and last name.  </span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.student_number <span class="op">=</span> tk.Entry(root)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.first_name <span class="op">=</span> tk.Entry(root)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.last_name <span class="op">=</span> tk.Entry(root)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Position the entry fields in the grid layout.      </span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.student_number.grid(row<span class="op">=</span><span class="dv">0</span>, column<span class="op">=</span><span class="dv">1</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.first_name.grid(row<span class="op">=</span><span class="dv">1</span>, column<span class="op">=</span><span class="dv">1</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.last_name.grid(row<span class="op">=</span><span class="dv">2</span>, column<span class="op">=</span><span class="dv">1</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Buttons to add a student and show the list of students.  The buttons are linked to their respective methods.</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>        tk.Button(root, text<span class="op">=</span><span class="st">"Add Student"</span>, command<span class="op">=</span><span class="va">self</span>.add_student).grid(row<span class="op">=</span><span class="dv">3</span>, column<span class="op">=</span><span class="dv">0</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        tk.Button(root, text<span class="op">=</span><span class="st">"Show Students"</span>, command<span class="op">=</span><span class="va">self</span>.show_students).grid(row<span class="op">=</span><span class="dv">3</span>, column<span class="op">=</span><span class="dv">1</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>        tk.Button(root, text<span class="op">=</span><span class="st">"Save to File"</span>, command<span class="op">=</span><span class="va">self</span>.save_to_file).grid(row<span class="op">=</span><span class="dv">4</span>, column<span class="op">=</span><span class="dv">0</span>, columnspan<span class="op">=</span><span class="dv">2</span>, padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="co">    The add_student method retrieves the input from the entry fields, validates it, and adds it to the students list. </span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="co">    It also provides feedback to the user through message boxes.</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add_student(<span class="va">self</span>):</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Adds a student to the list.</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        student_number <span class="op">=</span> <span class="va">self</span>.student_number.get()</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>        first_name <span class="op">=</span> <span class="va">self</span>.first_name.get()</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>        last_name <span class="op">=</span> <span class="va">self</span>.last_name.get()</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check if all fields are filled before adding the student to the list.  If any field is empty, a warning message is shown.</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> student_number <span class="kw">and</span> first_name <span class="kw">and</span> last_name:</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.students.append((student_number, first_name, last_name))</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>            messagebox.showinfo(<span class="st">"Success"</span>, <span class="st">"Student added successfully!"</span>)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.clear_entries()</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>            messagebox.showwarning(<span class="st">"Incomplete Data"</span>, <span class="st">"Please fill in all fields."</span>)</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The clear_entries method clears the input fields after a student is added successfully.</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> clear_entries(<span class="va">self</span>):</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>        <span class="co">#Clears the input fields.</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.student_number.delete(<span class="dv">0</span>, tk.END)</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.first_name.delete(<span class="dv">0</span>, tk.END)</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.last_name.delete(<span class="dv">0</span>, tk.END)</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>    <span class="co">#  The show_students method opens a new window to display the list of students.  If there are no students added, it shows an informational message.</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> show_students(<span class="va">self</span>):</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Opens a new window to display the student list.</span></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>.students:</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>            messagebox.showinfo(<span class="st">"No Data"</span>, <span class="st">"No students added yet."</span>)</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>        <span class="co">'''</span></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="co">        Creates a new window to display the student list.  </span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="co">        A Text widget is used to show the details of each student, and a button is provided to save the list to a file.</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="co">        '''</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>        display_window <span class="op">=</span> tk.Toplevel(<span class="va">self</span>.root)</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>        display_window.title(<span class="st">"Student List"</span>)</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>        text_area <span class="op">=</span> tk.Text(display_window, width<span class="op">=</span><span class="dv">50</span>, height<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>        text_area.pack(padx<span class="op">=</span><span class="dv">5</span>, pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>        <span class="co">'''</span></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="co">        Loop through the students list and insert their details into the Text widget.  </span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="co">        Each student's information is formatted and displayed on a new line.</span></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="co">        '''</span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> student <span class="kw">in</span> <span class="va">self</span>.students:</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>            text_area.insert(tk.END, <span class="ss">f"Student Number: </span><span class="sc">{</span>student[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">, "</span></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>                                         <span class="ss">f"First Name: </span><span class="sc">{</span>student[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">, "</span></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>                                         <span class="ss">f"Last Name: </span><span class="sc">{</span>student[<span class="dv">2</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Button to save the student list to a file, linked to the save_to_file method.</span></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>        tk.Button(display_window, text<span class="op">=</span><span class="st">"Save to File"</span>, command<span class="op">=</span><span class="va">self</span>.save_to_file).pack(pady<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a><span class="co">    The save_to_file method allows the user to save the list of students to a text file.  </span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="co">    It uses a file dialog to choose the save location and handles the file writing process.</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> save_to_file(<span class="va">self</span>):</span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Saves the student list to a file.</span></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>.students:</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>            messagebox.showinfo(<span class="st">"No Data"</span>, <span class="st">"No students to save."</span>)</span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>        file_path <span class="op">=</span> filedialog.asksaveasfilename(</span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>            defaultextension<span class="op">=</span><span class="st">".txt"</span>,</span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>            filetypes<span class="op">=</span>[(<span class="st">"Text Files"</span>, <span class="st">"*.txt"</span>), (<span class="st">"All Files"</span>, <span class="st">"*.*"</span>)]</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>        <span class="co"># If a file path is selected, the method writes the student details to the file.</span></span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> file_path:</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>            <span class="cf">with</span> <span class="bu">open</span>(file_path, <span class="st">"w"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> student <span class="kw">in</span> <span class="va">self</span>.students:</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">file</span>.write(<span class="ss">f"Student Number: </span><span class="sc">{</span>student[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">, "</span></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>                               <span class="ss">f"First Name: </span><span class="sc">{</span>student[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">, "</span></span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>                               <span class="ss">f"Last Name: </span><span class="sc">{</span>student[<span class="dv">2</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>            messagebox.showinfo(<span class="st">"Saved"</span>, <span class="st">"Student data saved successfully!"</span>)</span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a><span class="co"># Main application setup</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>    root <span class="op">=</span> tk.Tk()</span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>    app <span class="op">=</span> StudentApp(root)</span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>    root.mainloop()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+</section>
+</section>
+<section id="session-8" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Session 8</h1>
+<section id="object-orientated-programming-oop-working-with-classes-methods" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="object-orientated-programming-oop-working-with-classes-methods"><span class="header-section-number">2.1</span> Object-Orientated Programming (OOP) Working with Classes &amp; Methods</h2>
+<section id="introduction-1" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">2.1.1</span> Introduction</h3>
+<p>Imagine a blueprint for creating houses. This blueprint outlines the structure, materials, and layout of a house. In programming, a class is like this blueprint, defining the structure and behaviour of objects. A method is a function that defines a class’s behaviour.</p>
+</section>
+<section id="exercise-1-1" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="exercise-1-1"><span class="header-section-number">2.1.2</span> Exercise 1</h3>
+<section id="student-profile---user-class" class="level4">
+<h4 class="anchored" data-anchor-id="student-profile---user-class">Student Profile - User class</h4>
+<ol type="1">
+<li><p>Create a user profile by defining two core attributes <strong>first_name</strong> and <strong>last_name</strong>. This should include additional relevant details such as <strong>email, username, date_of_birth, location</strong>, and any other useful information.<br>
+To display the user’s details, create a method called <strong>describe_user()</strong> that prints a clear and concise summary of the stored attributes. and now implement a method named <strong>greet_user()</strong> that provides a personalised welcome message including the user’s first name.</p></li>
+<li><p>Create several instances representing different users, and call both methods for each user.</p></li>
+</ol>
+</section>
+</section>
+<section id="exercise-2-1" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="exercise-2-1"><span class="header-section-number">2.1.3</span> Exercise 2</h3>
+<section id="login-attempts" class="level4">
+<h4 class="anchored" data-anchor-id="login-attempts">Login Attempts</h4>
+<ol type="1">
+<li><p>Add an attribute called <strong>login_attempts</strong> to your User class.</p></li>
+<li><p>Write a method called <strong>increment_login_attempts()</strong> that increments the value of <strong>login_attempts</strong> by <strong>1</strong>.</p></li>
+<li><p>Write another method called <strong>reset_login_attempts()</strong> that resets the value of <strong>login_attempts</strong> to 0.</p></li>
+<li><p>Make an instance of the User class and call <strong>increment_login_attempts()</strong> several times.<br>
+Print the value of <strong>login_attempts</strong> to make sure it was correctly incremented, and then call <strong>reset_login_attempts()</strong>. Print <strong>login_attempts</strong> again to make sure it was reset to 0.</p></li>
+</ol>
+</section>
+</section>
+<section id="exercise-3-1" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="exercise-3-1"><span class="header-section-number">2.1.4</span> Exercise 3</h3>
+<section id="student-profile---classroom" class="level4">
+<h4 class="anchored" data-anchor-id="student-profile---classroom">Student Profile - Classroom</h4>
+<ol type="1">
+<li><p>Make a class called classroom. The <strong>init()</strong> method should store three attributes, <strong>classroom_name, classroom_location and seats_in_class</strong>. Make a method called <strong>describe_classroom()</strong> that prints these three pieces of information and a method called <strong>checksize_classroom()</strong> that prints a message indicating it has the number of seats needed from the course enrolled students.</p></li>
+<li><p>Make an instance called classroom from your class. Print the three attributes individually, and then call both methods.</p></li>
+<li><p>Create three different instances from the class and call <strong>describe_classroom()</strong> for each instance.</p></li>
+</ol>
+</section>
+</section>
+<section id="exercise-4" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="exercise-4"><span class="header-section-number">2.1.5</span> Exercise 4</h3>
+<section id="enrolled-students" class="level4">
+<h4 class="anchored" data-anchor-id="enrolled-students">Enrolled Students</h4>
+<ol type="1">
+<li><p>Add an attribute called <strong>students_enrolled</strong> with a default value of 0.<br>
+Create an instance called classroom from this class. Print the number of students that have been enrolled, and then change this value and print it again.</p></li>
+<li><p>Add a method <strong>called set_number_enrolled()</strong> to set the number of enrolled students.<br>
+Call this method with a new number and print the value again.</p></li>
+<li><p>Add a method called <strong>update_number_enrolled()</strong> that lets you change the number of enrolled students. Call this method with any number representing how many students are enrolled and create an audit log to capture a historical record of all changes. Include any other information you believe is relevant in the audit log.</p></li>
+</ol>
+</section>
+</section>
+<section id="exercise-5" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="exercise-5"><span class="header-section-number">2.1.6</span> Exercise 5</h3>
+<section id="classroom-equipment" class="level4">
+<h4 class="anchored" data-anchor-id="classroom-equipment">Classroom Equipment</h4>
+<ol type="1">
+<li><p>The equipment class represents a collection of devices used within a classroom. Create a class called equipment that inherits from the classroom class.</p></li>
+<li><p>Add an attribute named <strong>devices</strong> to store a list of classroom devices.</p></li>
+<li><p>Implement a method that displays all devices stored in the list.</p></li>
+<li><p>Create an instance of the Equipment class and call the method to display the devices.</p></li>
+</ol>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+</section>
+</section>
+<section id="appendices" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Appendices</h1>
+<section id="useful-reference-sites" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="useful-reference-sites"><span class="header-section-number">3.1</span> Useful reference sites</h2>
+<ol type="1">
+<li><p>tkinter, Python interface to Tcl/Tk <a href="https://docs.python.org/3/library/tkinter.html">Link Text</a></p></li>
+<li><p>Comprehensive Tkinter Cheatsheet <a href="https://github.com/shabir-mp/Comprehensive-Python-Tkinter-Cheatsheet">Link Text</a></p></li>
+<li><p>Tkinter reference: A GUI for Python <a href="https://users.tricity.wsu.edu/~bobl/cpts481/tkinter_nmt.pdf">Link Text</a></p></li>
+<li><p>Tkinter Python Library Cheatsheet <a href="https://studygyaan.com/cheatsheet/tkinter">Link Text</a></p></li>
+<li><p>Python GUI cheatsheet <a href="https://gist.github.com/athiyadeviyani/b18afdc8136f003956b1a71d94a6c696">Link Text</a></p></li>
+<li><p>Python GUI cheatsheet <a href="https://dl.icdst.org/pdfs/files3/4ee4d4129c1588e4faef1f48951bd718.pdf">Link Text</a></p></li>
+</ol>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="sample-data" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Sample Data</h1>
+<p>A number of tables are provided below to support the exercises in this worksheet. These tables are not exhaustive and are intended to provide a starting point for the exercises. You can expand on these tables as needed for your exercises.</p>
+<section id="table-1-name-enrollments" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="table-1-name-enrollments"><span class="header-section-number">4.0.1</span> Table (1) Name: Enrollments</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>StudentID</strong></th>
+<th style="text-align: left;"><strong>CourseID</strong></th>
+<th style="text-align: left;"><strong>Semester</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1001</td>
+<td style="text-align: left;">CS101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1001</td>
+<td style="text-align: left;">MATH101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1002</td>
+<td style="text-align: left;">CS101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1002</td>
+<td style="text-align: left;">MATH102</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1003</td>
+<td style="text-align: left;">CS202</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1003</td>
+<td style="text-align: left;">PHY101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1004</td>
+<td style="text-align: left;">CS202</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1004</td>
+<td style="text-align: left;">CHEM101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1005</td>
+<td style="text-align: left;">BIO101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1005</td>
+<td style="text-align: left;">HIST101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1006</td>
+<td style="text-align: left;">BIO102</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1006</td>
+<td style="text-align: left;">ENGL101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1007</td>
+<td style="text-align: left;">ECON101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1007</td>
+<td style="text-align: left;">PSY101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1008</td>
+<td style="text-align: left;">ECON102</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1008</td>
+<td style="text-align: left;">SOC101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1009</td>
+<td style="text-align: left;">PSY102</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1009</td>
+<td style="text-align: left;">SOC102</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1010</td>
+<td style="text-align: left;">CS101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1010</td>
+<td style="text-align: left;">MATH101</td>
+<td style="text-align: left;">S1</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="table-2-name-courses" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="table-2-name-courses"><span class="header-section-number">4.0.2</span> Table (2) Name: Courses</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>CourseID</strong></th>
+<th style="text-align: left;"><strong>CourseName</strong></th>
+<th style="text-align: left;"><strong>Department</strong></th>
+<th style="text-align: left;"><strong>Semester</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CS101</td>
+<td style="text-align: left;">Introduction to Computer Science</td>
+<td style="text-align: left;">Computer Science</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CS202</td>
+<td style="text-align: left;">Data Structures and Algorithms</td>
+<td style="text-align: left;">Computer Science</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MATH101</td>
+<td style="text-align: left;">Calculus I</td>
+<td style="text-align: left;">Mathematics</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MATH102</td>
+<td style="text-align: left;">Calculus II</td>
+<td style="text-align: left;">Mathematics</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PHY101</td>
+<td style="text-align: left;">General Physics I</td>
+<td style="text-align: left;">Physics</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PHY102</td>
+<td style="text-align: left;">General Physics II</td>
+<td style="text-align: left;">Physics</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CHEM101</td>
+<td style="text-align: left;">General Chemistry I</td>
+<td style="text-align: left;">Chemistry</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CHEM102</td>
+<td style="text-align: left;">General Chemistry II</td>
+<td style="text-align: left;">Chemistry</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BIO101</td>
+<td style="text-align: left;">Biology I</td>
+<td style="text-align: left;">Biology</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BIO102</td>
+<td style="text-align: left;">Biology II</td>
+<td style="text-align: left;">Biology</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HIST101</td>
+<td style="text-align: left;">American History I</td>
+<td style="text-align: left;">History</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HIST102</td>
+<td style="text-align: left;">American History II</td>
+<td style="text-align: left;">History</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ENGL101</td>
+<td style="text-align: left;">English Composition I</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ENGL102</td>
+<td style="text-align: left;">English Composition II</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ECON101</td>
+<td style="text-align: left;">Principles of Economics</td>
+<td style="text-align: left;">Economics</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ECON102</td>
+<td style="text-align: left;">Intermediate Microeconomics</td>
+<td style="text-align: left;">Economics</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PSY101</td>
+<td style="text-align: left;">Introduction to Psychology</td>
+<td style="text-align: left;">Psychology</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PSY102</td>
+<td style="text-align: left;">Developmental Psychology</td>
+<td style="text-align: left;">Psychology</td>
+<td style="text-align: left;">S2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SOC101</td>
+<td style="text-align: left;">Introduction to Sociology</td>
+<td style="text-align: left;">Sociology</td>
+<td style="text-align: left;">S1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SOC102</td>
+<td style="text-align: left;">Social Problems</td>
+<td style="text-align: left;">Sociology</td>
+<td style="text-align: left;">S2</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="table-3-name-students" class="level3" data-number="4.0.3">
+<h3 data-number="4.0.3" class="anchored" data-anchor-id="table-3-name-students"><span class="header-section-number">4.0.3</span> Table (3) Name: Students</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>StudentID</strong></th>
+<th style="text-align: left;"><strong>StudentFirstname</strong></th>
+<th style="text-align: left;"><strong>StudentLastname</strong></th>
+<th style="text-align: left;"><strong>Email</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1001</td>
+<td style="text-align: left;">Alice</td>
+<td style="text-align: left;">Smith</td>
+<td style="text-align: left;"><a href="mailto:sd1001@uni123.edu.au">sd1001@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1002</td>
+<td style="text-align: left;">Bob</td>
+<td style="text-align: left;">Johnson</td>
+<td style="text-align: left;"><a href="mailto:sd1002@uni123.edu.au">sd1002@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1003</td>
+<td style="text-align: left;">Charlie</td>
+<td style="text-align: left;">Brown</td>
+<td style="text-align: left;"><a href="mailto:sd1003@uni123.edu.au">sd1003@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1004</td>
+<td style="text-align: left;">David</td>
+<td style="text-align: left;">Lee</td>
+<td style="text-align: left;"><a href="mailto:sd1004@uni123.edu.au">sd1004@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1005</td>
+<td style="text-align: left;">Emily</td>
+<td style="text-align: left;">Davis</td>
+<td style="text-align: left;"><a href="mailto:sd1005@uni123.edu.au">sd1005@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1006</td>
+<td style="text-align: left;">Frank</td>
+<td style="text-align: left;">Wilson</td>
+<td style="text-align: left;"><a href="mailto:sd1006@uni123.edu.au">sd1006@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1007</td>
+<td style="text-align: left;">Grace</td>
+<td style="text-align: left;">Taylor</td>
+<td style="text-align: left;"><a href="mailto:sd1007@uni123.edu.au">sd1007@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1008</td>
+<td style="text-align: left;">Henry</td>
+<td style="text-align: left;">Anderson</td>
+<td style="text-align: left;"><a href="mailto:sd1008@uni123.edu.au">sd1008@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1009</td>
+<td style="text-align: left;">Isabella</td>
+<td style="text-align: left;">Thomas</td>
+<td style="text-align: left;"><a href="mailto:sd1009@uni123.edu.au">sd1009@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1010</td>
+<td style="text-align: left;">Jack</td>
+<td style="text-align: left;">Hill</td>
+<td style="text-align: left;"><a href="mailto:sd1010@uni123.edu.au">sd1010@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1011</td>
+<td style="text-align: left;">Kate</td>
+<td style="text-align: left;">Baker</td>
+<td style="text-align: left;"><a href="mailto:sd1011@uni123.edu.au">sd1011@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1012</td>
+<td style="text-align: left;">Liam</td>
+<td style="text-align: left;">Carter</td>
+<td style="text-align: left;"><a href="mailto:sd1012@uni123.edu.au">sd1012@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1013</td>
+<td style="text-align: left;">Maria</td>
+<td style="text-align: left;">Evans</td>
+<td style="text-align: left;"><a href="mailto:sd1013@uni123.edu.au">sd1013@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1014</td>
+<td style="text-align: left;">Noah</td>
+<td style="text-align: left;">Robinson</td>
+<td style="text-align: left;"><a href="mailto:sd1014@uni123.edu.au">sd1014@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1015</td>
+<td style="text-align: left;">Olivia</td>
+<td style="text-align: left;">Lewis</td>
+<td style="text-align: left;"><a href="mailto:sd1015@uni123.edu.au">sd1015@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1016</td>
+<td style="text-align: left;">Parker</td>
+<td style="text-align: left;">Allen</td>
+<td style="text-align: left;"><a href="mailto:sd1016@uni123.edu.au">sd1016@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1017</td>
+<td style="text-align: left;">Quinn</td>
+<td style="text-align: left;">Williams</td>
+<td style="text-align: left;"><a href="mailto:sd1017@uni123.edu.au">sd1017@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1018</td>
+<td style="text-align: left;">Riley</td>
+<td style="text-align: left;">Jones</td>
+<td style="text-align: left;"><a href="mailto:sd1018@uni123.edu.au">sd1018@uni123st.edu.au</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1019</td>
+<td style="text-align: left;">Sophia</td>
+<td style="text-align: left;">Clark</td>
+<td style="text-align: left;"><a href="mailto:sd1019@uni123.edu.au">sd1019@uni123st.edu.au</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1020</td>
+<td style="text-align: left;">Tyler</td>
+<td style="text-align: left;">Brown</td>
+<td style="text-align: left;"><a href="mailto:sd1020@uni123.edu.au">sd1020@uni123st.edu.au</a></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="table-4-name-lecturers" class="level3" data-number="4.0.4">
+<h3 data-number="4.0.4" class="anchored" data-anchor-id="table-4-name-lecturers"><span class="header-section-number">4.0.4</span> Table (4) Name: Lecturers</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>LecturerID</strong></th>
+<th style="text-align: left;"><strong>LecturerTitle</strong></th>
+<th style="text-align: left;"><strong>LecturerFirstname</strong></th>
+<th style="text-align: left;"><strong>LecturerLastname</strong></th>
+<th style="text-align: left;"><strong>Email</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Dr.</td>
+<td style="text-align: left;">John</td>
+<td style="text-align: left;">Doe</td>
+<td style="text-align: left;">John.Doe@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Prof.</td>
+<td style="text-align: left;">Jane</td>
+<td style="text-align: left;">Smith</td>
+<td style="text-align: left;">Jane.Smith@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Mr.</td>
+<td style="text-align: left;">Michael</td>
+<td style="text-align: left;">Johnson</td>
+<td style="text-align: left;">Michael.Johnson@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Dr.</td>
+<td style="text-align: left;">Emily</td>
+<td style="text-align: left;">Brown</td>
+<td style="text-align: left;">Emily.Brown@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Prof.</td>
+<td style="text-align: left;">David</td>
+<td style="text-align: left;">Lee</td>
+<td style="text-align: left;">David.Lee@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Asst. Prof.</td>
+<td style="text-align: left;">Olivia</td>
+<td style="text-align: left;">Taylor</td>
+<td style="text-align: left;">Olivia.Taylor@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Dr.</td>
+<td style="text-align: left;">Noah</td>
+<td style="text-align: left;">Wilson</td>
+<td style="text-align: left;">Noah.Wilson@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Miss.</td>
+<td style="text-align: left;">Sophia</td>
+<td style="text-align: left;">Carter</td>
+<td style="text-align: left;">Sophia.Carter@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Asst. Prof.</td>
+<td style="text-align: left;">Jacob</td>
+<td style="text-align: left;">Miller</td>
+<td style="text-align: left;">Jacob.Miller@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Dr.</td>
+<td style="text-align: left;">Emma</td>
+<td style="text-align: left;">Davis</td>
+<td style="text-align: left;">Emma.Davis@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">Mrs.</td>
+<td style="text-align: left;">Ethan</td>
+<td style="text-align: left;">Jones</td>
+<td style="text-align: left;">Ethan.Jones@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Asst. Prof.</td>
+<td style="text-align: left;">Ava</td>
+<td style="text-align: left;">Martinez</td>
+<td style="text-align: left;">Ava.Martinez@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">Dr.</td>
+<td style="text-align: left;">Oliver</td>
+<td style="text-align: left;">Hernandez</td>
+<td style="text-align: left;">Oliver.Hernandez@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">Prof.</td>
+<td style="text-align: left;">Isabella</td>
+<td style="text-align: left;">Garcia</td>
+<td style="text-align: left;">Isabella.Garcia@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">Asst. Prof.</td>
+<td style="text-align: left;">Liam</td>
+<td style="text-align: left;">Lopez</td>
+<td style="text-align: left;">Liam.Lopez@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">Dr.</td>
+<td style="text-align: left;">Mia</td>
+<td style="text-align: left;">Gonzalez</td>
+<td style="text-align: left;">Mia.Gonzalez@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">Prof.</td>
+<td style="text-align: left;">Elijah</td>
+<td style="text-align: left;">Rodriguez</td>
+<td style="text-align: left;">Elijah.Rodriguez@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">Asst. Prof.</td>
+<td style="text-align: left;">Amelia</td>
+<td style="text-align: left;">Perez</td>
+<td style="text-align: left;">Amelia.Perez@uni123.edu.au</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">Dr.</td>
+<td style="text-align: left;">Lucas</td>
+<td style="text-align: left;">Sanchez</td>
+<td style="text-align: left;">Lucas.Sanchez@uni123.edu.au</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">Prof.</td>
+<td style="text-align: left;">Evelyn</td>
+<td style="text-align: left;">Russell</td>
+<td style="text-align: left;">Evelyn.Russell@uni123.edu.au</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="table-5-name-lecturerassignment" class="level3" data-number="4.0.5">
+<h3 data-number="4.0.5" class="anchored" data-anchor-id="table-5-name-lecturerassignment"><span class="header-section-number">4.0.5</span> Table (5) Name: LecturerAssignment</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>TrackID</strong></th>
+<th style="text-align: left;"><strong>LecturerID</strong></th>
+<th style="text-align: left;"><strong>CourseID</strong></th>
+<th style="text-align: left;"><strong>YearID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">CS101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">CS202</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">MATH101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">MATH102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">PHY101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">PHY102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">CHEM101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">CHEM102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">BIO101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">BIO102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">HIST101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">HIST102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">ENGL101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">ENGL102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">ECON101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">ECON102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">PSY101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">PSY102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">SOC101</td>
+<td style="text-align: left;">2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">SOC102</td>
+<td style="text-align: left;">2024</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="table-6-name-locations" class="level3" data-number="4.0.6">
+<h3 data-number="4.0.6" class="anchored" data-anchor-id="table-6-name-locations"><span class="header-section-number">4.0.6</span> Table (6) Name: Locations</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>RoomNumber</th>
+<th>Capacity</th>
+<th style="text-align: left;">FloorNumber</th>
+<th style="text-align: left;">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td>101</td>
+<td>15</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>102</td>
+<td>15</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>103</td>
+<td>20</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>104</td>
+<td>20</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>105</td>
+<td>25</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>106</td>
+<td>25</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>107</td>
+<td>30</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>108</td>
+<td>30</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>109</td>
+<td>30</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>110</td>
+<td>10</td>
+<td style="text-align: left;">Ground Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>201</td>
+<td>10</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>202</td>
+<td>10</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>203</td>
+<td>25</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>204</td>
+<td>25</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>205</td>
+<td>30</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>206</td>
+<td>40</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="even">
+<td>207</td>
+<td>40</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+<tr class="odd">
+<td>208</td>
+<td>40</td>
+<td style="text-align: left;">1st Floor</td>
+<td style="text-align: left;">Building A</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="table-7-name-timeslots" class="level3" data-number="4.0.7">
+<h3 data-number="4.0.7" class="anchored" data-anchor-id="table-7-name-timeslots"><span class="header-section-number">4.0.7</span> Table (7) Name: TimeSlots</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>TimeSloID</th>
+<th>StartTime</th>
+<th>EndTime</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>08:00</td>
+<td>09:00</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>09:00</td>
+<td>10:00</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>10:00</td>
+<td>11:00</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>11:00</td>
+<td>12:00</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>12:00</td>
+<td>13:00</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>13:00</td>
+<td>14:00</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>14:00</td>
+<td>15:00</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>15:00</td>
+<td>16:00</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>16:00</td>
+<td>17:00</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>17:00</td>
+<td>18:00</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>18:00</td>
+<td>19:00</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>19:00</td>
+<td>20:00</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>20:00</td>
+<td>21:00</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>08:00</td>
+<td>10:00</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>10:00</td>
+<td>12:00</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>12:00</td>
+<td>14:00</td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td>14:00</td>
+<td>16:00</td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td>16:00</td>
+<td>18:00</td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td>18:00</td>
+<td>20:00</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>20:00</td>
+<td>22:00</td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td>08:00</td>
+<td>11:00</td>
+</tr>
+<tr class="odd">
+<td>22</td>
+<td>11:00</td>
+<td>14:00</td>
+</tr>
+<tr class="even">
+<td>23</td>
+<td>14:00</td>
+<td>17:00</td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td>17:00</td>
+<td>20:00</td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>20:00</td>
+<td>23:00</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="table-8-name-equipment" class="level3" data-number="4.0.8">
+<h3 data-number="4.0.8" class="anchored" data-anchor-id="table-8-name-equipment"><span class="header-section-number">4.0.8</span> Table (8) Name: Equipment</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Index</th>
+<th style="text-align: left;">Device_Type</th>
+<th style="text-align: left;">Device</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">IW1</td>
+<td style="text-align: left;">Interactive Whiteboard</td>
+<td style="text-align: left;">Displays lessons, videos, and interactive content.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">DT1</td>
+<td style="text-align: left;">Desktop Computers</td>
+<td style="text-align: left;">For student research, assignments, and online learning.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Lap1</td>
+<td style="text-align: left;">Laptops</td>
+<td style="text-align: left;">Portable devices for individual work and presentations.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Tab1</td>
+<td style="text-align: left;">Tablets</td>
+<td style="text-align: left;">Lightweight and versatile for note-taking, reading, and interactive activities.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Cam1</td>
+<td style="text-align: left;">Document Cameras</td>
+<td style="text-align: left;">Displays physical objects, such as textbooks or drawings, onto the whiteboard.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">STV1</td>
+<td style="text-align: left;">Smart TVs</td>
+<td style="text-align: left;">Large screens for group viewing of videos or presentations.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">SS1</td>
+<td style="text-align: left;">Sound System</td>
+<td style="text-align: left;">Enhances audio quality for lectures, videos, and music.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">AP1</td>
+<td style="text-align: left;">Wi-Fi Access Point</td>
+<td style="text-align: left;">Provides internet connectivity for all devices.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">CS1</td>
+<td style="text-align: left;">Charging Stations</td>
+<td style="text-align: left;">For recharging devices during class or breaks.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">DS1</td>
+<td style="text-align: left;">Digital Signage</td>
+<td style="text-align: left;">Displays announcements, reminders, and school information.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
